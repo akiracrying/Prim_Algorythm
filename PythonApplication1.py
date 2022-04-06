@@ -69,7 +69,7 @@ def prim(G, start, size):
     print(all_weight)
     for line in weight_matrix:
         print(line)
-    with open ("input_36.out", "w") as Out:
+    with open ("input.out", "w") as Out:
         Out.write(str(all_weight) + '\n')
         for i in range(0, len(weight_matrix)):
             for j in range(0, len(weight_matrix[i])):
@@ -82,10 +82,7 @@ def prim(G, start, size):
 
 
 if __name__ == '__main__':
-    #print("Enter file name:")
-    #inp = input()
-    #inp = "PR.in"
-    inp = "input_36.in"
+    inp = "input.in"
     with open(inp, "r") as myFile:
         size, alg_type, node = myFile.readline().split() # node - node to start from
         G = myFile.readlines()     # alg_type - Prim's alg
@@ -95,9 +92,7 @@ if __name__ == '__main__':
     node = int(node)
     alg_type = int(alg_type)
     size = int(size)
-    # print(size, alg_type, node)
-    #for line in G:
-    #    print(line)
+
     for i in range(0, len(G)):
         G[i] = [int(x) for x in G[i]]
     for i in range(0, len(G)):
